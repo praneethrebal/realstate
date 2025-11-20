@@ -1,0 +1,95 @@
+/* ===========================
+   CONTACT US FORM STYLING
+=========================== */
+
+.ContactUsForm {
+  width: 550px;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #111827;
+  margin: 2rem auto;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.ContactUsForm:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.form-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* INPUTS */
+.ContactUsForm input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #111827;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ContactUsForm input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.ContactUsForm ::placeholder {
+  color: #6b7280;
+}
+
+/* BUTTON */
+.ContactUsForm button {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.ContactUsForm button:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+  .ContactUsForm {
+    width: 90%;
+    padding: 2rem;
+    gap: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ContactUsForm {
+    width: 95%;
+    padding: 1.7rem;
+    gap: 1.2rem;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+  }
+}

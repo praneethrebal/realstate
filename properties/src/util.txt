@@ -1,0 +1,512 @@
+// const AddProperty = () => {
+//   const [step, setStep] = useState(1);
+//   const { username } = useAuth();
+
+//   const [formData, setFormData] = useState({
+//     lookingTo: "",
+//     propertyType: "",
+//     projectName: "",
+//     extent: "",
+//     facing: "",
+//     roadSize: "",
+//     units: "",
+//     dimensions: "",
+//     numberOfFloors: "",
+//     numberOfBHK: "",
+//     builtUpArea: "",
+//     carpetArea: "",
+//     openArea: "",
+//     rentalIncome: "",
+//     floorNo: "",
+//     communityType: "",
+//     roadFacing: false,
+//     waterSource: "",
+//     unitType: "",
+//     zone: "",
+//     developmentType: "",
+//     expectedAdvance: "",
+//     ratio: "",
+//     disputeDetails: "",
+//     lookingToSell: false,
+//     problemDetails: "",
+//     actualPrice: "",
+//     salePrice: "",
+//     look: "",
+//     selectProperty: "",
+//     reraApproved: false,
+//     approvalType: "",
+//     amenities: "",
+//     highlights: "",
+//     location: "",
+//     locationUrl: "",
+//   });
+
+//   const handleChange = (e) => {
+//     setFormData({ ...formData, [e.target.name]: e.target.value });
+//   };
+
+//   const nextStep = () => setStep((prev) => prev + 1);
+//   const prevStep = () => setStep((prev) => prev - 1);
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     console.log("Final Data:", formData);
+//     // API call to save data
+//   };
+
+//   // ---- DYNAMIC FIELDS ----
+//   const renderStepFields = () => {
+//     if (step === 2) {
+//       if (formData.propertyType === "Plot") {
+//         return (
+//           <>
+//             <div className="step2">
+//               <div>
+//                 <input
+//                   type="text"
+//                   name="projectName"
+//                   placeholder="Project/Venture Name"
+//                   value={formData.projectName}
+//                   onChange={handleChange}
+//                 />
+//               </div>
+//               <div style={{ display: "flex", justifyContent: "space-between" }}>
+//                 <div>
+//                   {" "}
+//                   <input
+//                     type="text"
+//                     name="extent"
+//                     placeholder="Extent (sqft)"
+//                     value={formData.extent}
+//                     onChange={handleChange}
+//                   />
+//                 </div>
+//                 <div style={{ width: "40%" }}>
+//                   <select style={{ width: "100%" }}>
+//                     <option>sqyd</option>
+//                     <option>sft</option>
+//                   </select>
+//                 </div>
+//               </div>
+
+//               <input
+//                 type="text"
+//                 name="facing"
+//                 placeholder="Facing (East, West...)"
+//                 value={formData.facing}
+//                 onChange={handleChange}
+//               />
+//               <input
+//                 type="text"
+//                 name="roadSize"
+//                 placeholder="Road Size (ft)"
+//                 value={formData.roadSize}
+//                 onChange={handleChange}
+//               />
+//               <input
+//                 type="text"
+//                 name="dimensions"
+//                 placeholder="dimensionse"
+//                 value={formData.dimensions}
+//                 onChange={handleChange}
+//               />
+//             </div>
+//           </>
+//         );
+//       } else if (formData.propertyType === "House") {
+//         return (
+//           <div className="step2">
+//             <input
+//               type="text"
+//               name="projectName"
+//               placeholder="Project/Venture Name"
+//               value={formData.projectName}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="extent"
+//               placeholder="Extent (sqft)"
+//               value={formData.extent}
+//               onChange={handleChange}
+//             />
+//             <select style={{ width: "100%" }}>
+//               <option>sqyd</option>
+//               <option>sft</option>
+//             </select>
+//             <input
+//               type="number"
+//               name="numberOfBHK"
+//               placeholder="No. of BHK"
+//               value={formData.numberOfBHK}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="number"
+//               name="numberOfFloors"
+//               placeholder="No. of Floors"
+//               value={formData.numberOfFloors}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="facing"
+//               placeholder="Facing (East, West...)"
+//               value={formData.facing}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="roadSize"
+//               placeholder="Road Size (ft)"
+//               value={formData.roadSize}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="dimensions"
+//               placeholder="Dimensions (e.g. 30x40)"
+//               value={formData.dimensions}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="builtUpArea"
+//               placeholder="Built-up Area (sqft)"
+//               value={formData.builtUpArea}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="carpetArea"
+//               placeholder="Carpet Area (sqft)"
+//               value={formData.carpetArea}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="openArea"
+//               placeholder="Open Area (sqft)"
+//               value={formData.openArea}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="number"
+//               name="floorNo"
+//               placeholder="Floor No."
+//               value={formData.floorNo}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="rentalIncome"
+//               placeholder="rentalIncome"
+//               value={formData.rentalIncome}
+//               onChange={handleChange}
+//             />
+
+//             <input
+//               type="text"
+//               placeholder="Facing"
+//               name="roadFacing"
+//               checked={formData.roadFacing}
+//               onChange={(e) =>
+//                 setFormData({ ...formData, roadFacing: e.target.checked })
+//               }
+//             />
+//           </div>
+//         );
+//       } else if (formData.propertyType === "Flat") {
+//         return (
+//           <>
+//             <input
+//               type="number"
+//               name="floorNo"
+//               placeholder="Floor No."
+//               value={formData.floorNo}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="communityType"
+//               placeholder="Community Type"
+//               value={formData.communityType}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="amenities"
+//               placeholder="Amenities"
+//               value={formData.amenities}
+//               onChange={handleChange}
+//             />
+//             <input
+//               type="text"
+//               name="highlights"
+//               placeholder="Highlights"
+//               value={formData.highlights}
+//               onChange={handleChange}
+//             />
+//           </>
+//         );
+//       }
+//     }
+
+//     if (step === 3) {
+//       return (
+//         <div className="step3">
+//           {/* RERA Approved */}
+//           <div>
+//             <label>
+//               <input
+//                 type="checkbox"
+//                 name="reraApproved"
+//                 checked={formData.reraApproved}
+//                 onChange={(e) =>
+//                   setFormData({ ...formData, reraApproved: e.target.checked })
+//                 }
+//               />{" "}
+//               RERA Approved
+//             </label>
+//           </div>
+//           <div>
+//             Type of approval
+//             <input
+//               type="text"
+//               name="approvalType"
+//               value={formData.approvalType}
+//             />
+//           </div>
+
+//           {/* Amenities */}
+//           <div>
+//             <label>Amenities</label>
+//             <select
+//               name="amenities"
+//               value={formData.amenities}
+//               onChange={handleChange}
+//             >
+//               <option value="">Select Amenities</option>
+//               <option value="Swimming Pool">Swimming Pool</option>
+//               <option value="Gym">Gym</option>
+//               <option value="Playground">Playground</option>
+//               <option value="Park">Park</option>
+//               <option value="Club House">Club House</option>
+//             </select>
+//           </div>
+
+//           {/* Highlights */}
+//           <div>
+//             <label>Highlights</label>
+//             <input
+//               type="text"
+//               name="highlights"
+//               placeholder="Type Highlights"
+//               value={formData.highlights}
+//               onChange={handleChange}
+//             />
+//           </div>
+//         </div>
+//       );
+//     }
+//     if (step === 4) {
+//       return (
+//         <div className="step4">
+//           {/* Location */}
+//           <div>
+//             <label>Location</label>
+//             <input
+//               type="text"
+//               name="location"
+//               placeholder="Enter Location"
+//               value={formData.location}
+//               onChange={handleChange}
+//             />
+//           </div>
+
+//           {/* Location URL */}
+//           <div>
+//             <label>Location URL</label>
+//             <input
+//               type="text"
+//               name="locationUrl"
+//               placeholder="Enter Location URL"
+//               value={formData.locationUrl}
+//               onChange={handleChange}
+//             />
+//           </div>
+
+//           {/* Upload Photos */}
+//           <div>
+//             <label>Upload Photos</label>
+//             <input
+//               type="file"
+//               name="photos"
+//               multiple
+//               onChange={(e) =>
+//                 setFormData({ ...formData, photos: e.target.files })
+//               }
+//             />
+//           </div>
+
+//           {/* Upload Video */}
+//           <div>
+//             <label>Upload Video</label>
+//             <input
+//               type="file"
+//               name="video"
+//               onChange={(e) =>
+//                 setFormData({ ...formData, video: e.target.files[0] })
+//               }
+//             />
+//           </div>
+
+//           {/* Upload Documents */}
+//           <div>
+//             <label>Upload Documents</label>
+//             <input
+//               type="file"
+//               name="documents"
+//               multiple
+//               onChange={(e) =>
+//                 setFormData({ ...formData, documents: e.target.files })
+//               }
+//             />
+//           </div>
+
+//           {/* Price */}
+//           <div>
+//             <label>Price (₹)</label>
+//             <input
+//               type="number"
+//               name="salePrice"
+//               placeholder="Enter Price"
+//               value={formData.salePrice}
+//               onChange={handleChange}
+//             />
+//           </div>
+//         </div>
+//       );
+//     }
+
+//     return null;
+//   };
+
+//   return (
+//     <div className="addProperty">
+//       <NavBar />
+//       <div className="form-container">
+//         {/* Step 1: Basic Selection */}
+//         {step === 1 && (
+//           <form>
+//             <h2>Welcome {username}</h2>
+
+//             {/* Looking To */}
+//             <div className="form-section">
+//               <h3>Looking to</h3>
+//               <div className="options">
+//                 <button
+//                   type="button"
+//                   className={`option ${
+//                     formData.lookingTo === "Sell" ? "active" : ""
+//                   }`}
+//                   onClick={() =>
+//                     setFormData({ ...formData, lookingTo: "Sell" })
+//                   }
+//                 >
+//                   Sell
+//                 </button>
+//                 <button
+//                   type="button"
+//                   className={`option ${
+//                     formData.lookingTo === "Rent/Lease" ? "active" : ""
+//                   }`}
+//                   onClick={() =>
+//                     setFormData({ ...formData, lookingTo: "Rent/Lease" })
+//                   }
+//                 >
+//                   Rent / Lease
+//                 </button>
+//               </div>
+//             </div>
+
+//             {/* Property Type */}
+//             <div className="form-section">
+//               <h3>What is your Property</h3>
+//               <div className="options">
+//                 {["Plot", "House", "Flat"].map((type) => (
+//                   <button
+//                     key={type}
+//                     type="button"
+//                     className={`option ${
+//                       formData.propertyType === type ? "active" : ""
+//                     }`}
+//                     onClick={() =>
+//                       setFormData({ ...formData, propertyType: type })
+//                     }
+//                   >
+//                     {type}
+//                   </button>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <div className="buttons">
+//               <button type="button" className="next" onClick={nextStep}>
+//                 Next →
+//               </button>
+//             </div>
+//           </form>
+//         )}
+
+//         {/* Step 2: Dynamic fields */}
+//         {step === 2 && (
+//           <form>
+//             <h2>Additional Information</h2>
+//             {renderStepFields()}
+//             <div className="buttons">
+//               <button type="button" className="next" onClick={prevStep}>
+//                 ← Back
+//               </button>
+//               <button type="button" className="next" onClick={nextStep}>
+//                 Next →
+//               </button>
+//             </div>
+//           </form>
+//         )}
+
+//         {/* Step 3: Final */}
+//         {step === 3 && (
+//           <form>
+//             <h2>Final Details</h2>
+//             {renderStepFields()}
+//             <div className="buttons">
+//               <button type="button" className="next" onClick={prevStep}>
+//                 ← Back
+//               </button>
+//               <button type="button" className="next" onClick={nextStep}>
+//                 next →
+//               </button>
+//             </div>
+//           </form>
+//         )}
+//         {step === 4 && (
+//           <form onSubmit={handleSubmit}>
+//             <h2>Final Details</h2>
+//             {renderStepFields()}
+//             <div className="buttons">
+//               <button type="button" className="next" onClick={prevStep}>
+//                 ← Back
+//               </button>
+//               <button type="submit" className="next">
+//                 Post Property
+//               </button>
+//             </div>
+//           </form>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default AddProperty;

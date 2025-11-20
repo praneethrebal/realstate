@@ -1,0 +1,36 @@
+/* Container for all mobile search elements */
+.mobile-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make all form fields full-width and consistent */
+.mobile-search-container select,
+.mobile-search-container input,
+.mobile-search-container .form-control,
+.mobile-search-container .form-select,
+.mobile-search-container .search-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Search Button Styling */
+.search-button {
+  background: #ff6f61;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: #e65b50;
+}

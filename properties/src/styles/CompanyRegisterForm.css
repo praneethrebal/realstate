@@ -1,0 +1,270 @@
+/* ==============================
+   COMPANY REGISTER FORM - PROFESSIONAL STYLE
+   ============================== */
+
+.companyRegisterForm {
+  width: 550px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  color: #111827;
+}
+
+.companyRegisterForm:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.companyRegisterForm h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   MEDIA UPLOAD SECTION
+   ============================== */
+
+.media-upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wallpaper-upload {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+.wallpaper-upload img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.upload-text.wallpaper-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(37, 99, 235, 0.8);
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  pointer-events: none;
+}
+
+.logo-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo-upload img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+  object-fit: cover;
+}
+
+.upload-text.logo-text {
+  margin-top: 5px;
+  background: rgba(37, 99, 235, 0.8);
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-align: center;
+  pointer-events: none;
+}
+
+/* ==============================
+   INPUT FIELDS
+   ============================== */
+
+.companyRegisterForm input,
+.companyRegisterForm textarea,
+.companyRegisterForm select {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1rem;
+  color: #111827;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.companyRegisterForm input:focus,
+.companyRegisterForm textarea:focus,
+.companyRegisterForm select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.companyRegisterForm ::placeholder {
+  color: #6b7280;
+}
+
+/* ==============================
+   PLAN OPTIONS - BUTTON STYLE
+   ============================== */
+
+.plan-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.plan-options button {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #120101;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Blue plan button */
+.plan-options button.blue-plan {
+  background: linear-gradient(90deg, #8aa1d2, #1d4ed8);
+}
+
+.plan-options button.blue-plan:hover {
+  background: linear-gradient(90deg, #617acb, #1d4ed8);
+}
+
+/* Red plan button */
+.plan-options button.red-plan {
+  background: linear-gradient(90deg, #d28383, #b91c1c);
+}
+
+.plan-options button.red-plan:hover {
+  background: linear-gradient(90deg, #991b1b, #ea9e9e);
+}
+
+/* Selected plan indication */
+.plan-options button.selected-plan {
+  border: 2px solid #000; /* black border for selected */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+.companyRegisterForm button {
+  background: linear-gradient(90deg, #5b87e7, #1d4ed8);
+  color: #fff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+
+.companyRegisterForm button.submit-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* ==============================
+   ALERT MESSAGES
+   ============================== */
+
+.companyRegisterForm .alert {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.companyRegisterForm .alert.success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.companyRegisterForm .alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+
+@media (max-width: 768px) {
+  .companyRegisterForm {
+    width: 90%;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .wallpaper-upload {
+    height: 160px;
+  }
+
+  .logo-upload img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .plan-options {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .companyRegisterForm {
+    width: 95%;
+    padding: 1.7rem;
+    gap: 1.5rem;
+  }
+
+  .companyRegisterForm h1 {
+    font-size: 1.4rem;
+  }
+
+  .wallpaper-upload {
+    height: 140px;
+  }
+
+  .logo-upload img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .plan-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

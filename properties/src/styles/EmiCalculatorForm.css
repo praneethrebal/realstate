@@ -1,0 +1,110 @@
+/* ==============================
+   EMI CALCULATOR FORM STYLING
+   ============================== */
+
+.emi-form {
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.emi-form:hover {
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.12);
+}
+
+.emi-form p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ==============================
+   INPUT FIELDS
+   ============================== */
+
+.emi-form input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 1rem;
+  color: #111827;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.emi-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  background-color: #ffffff;
+}
+
+/* Placeholder style */
+.emi-form ::placeholder {
+  color: #9ca3af;
+}
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+.emi-form button {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.emi-form button:hover {
+  background: linear-gradient(90deg, #1d4ed8, #1e40af);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+}
+
+/* ==============================
+   EMI RESULT DISPLAY
+   ============================== */
+
+.emi-form h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.emi-form h3 span {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 600px) {
+  .emi-form {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .emi-form p {
+    font-size: 1.25rem;
+  }
+}

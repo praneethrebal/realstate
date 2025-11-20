@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  margin: 0; /* optional: remove default margin */
+  font-family: Arial, sans-serif; /* optional */
+  height: 100vh;
+  color: black;
+}

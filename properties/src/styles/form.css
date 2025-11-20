@@ -1,0 +1,305 @@
+/* Background and Layout */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #1f1f1f
+    url("/path-to-your-bg/d65fb4cf-efd2-476c-86c3-2bfe42bad3ac.png") no-repeat
+    center;
+  background-size: cover;
+  margin: 0;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Form Container */
+.form-container {
+  width: 100%;
+  max-width: 640px;
+  background: rgba(248, 245, 245, 0.75);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  /* backdrop-filter: blur(5px); */
+}
+
+/* Headings */
+form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #0b0000;
+  font-weight: 600;
+}
+
+/* Profile / Logo Photo Input */
+.profile-photo-label {
+  width: 80px; /* Bigger circle */
+  height: 80px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  margin: 0 auto 20px auto; /* Center horizontally */
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+  padding: 8px;
+}
+
+.profile-photo-label:hover {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  transform: scale(1.05);
+}
+
+.profile-photo-label img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#photoInput {
+  display: none;
+}
+
+.profile-photo-label svg {
+  width: 28px; /* Slightly larger icon */
+  height: 28px;
+  color: #bbb;
+}
+
+/* Wallpaper Upload (Company Form Only) */
+.wallpaper-upload {
+  position: relative;
+  width: 100%;
+  height: 140px; /* slightly taller */
+  border: 2px dashed #444;
+  border-radius: 8px;
+  background-color: #2a2a2a;
+  overflow: hidden;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.wallpaper-upload:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  transform: scale(1.05);
+}
+.wallpaper-upload img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wallpaper-upload input {
+  display: none;
+}
+
+.wallpaper-upload label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.wallpaper-upload label:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #0c0000;
+  font-weight: 500;
+}
+
+/* Inputs, Selects, Textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #efeded;
+  color: #0f0000;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 200px;
+  resize: vertical;
+  overflow-y: auto;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+/* Input Focus Effect */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+  outline: none;
+}
+
+/* Radio Group */
+.radio-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #ccc;
+}
+
+.radio-option input[type="radio"] {
+  accent-color: #007bff;
+}
+
+/* Buttons */
+.btn-submit,
+.btn-company,
+.btn-side {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 24px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 20px auto 10px auto; /* Center horizontally */
+  width: auto;
+  min-width: 140px;
+  text-align: center;
+}
+
+.btn-side {
+  margin: 0 auto 20px auto; /* Center top Profile button */
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.btn-side:hover {
+  background-color: #0056b3;
+}
+
+.btn-submit {
+  background-color: #ff2d2d;
+  color: #fff;
+}
+
+.btn-submit:hover {
+  background-color: #e60000;
+}
+
+.btn-company {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-company:hover {
+  background-color: #0056b3;
+}
+
+/* Error and success messages */
+.error-message {
+  color: #ff4d4f;
+  text-align: center;
+  font-size: 14px;
+}
+
+.success-message {
+  color: #00d97e;
+  text-align: center;
+}
+
+/* Login Redirect Link */
+.form-c p span,
+.login-form span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* Form Rows for half-width fields */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group.half-width {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .form-container {
+    padding: 25px 20px;
+  }
+
+  .login-form input[type="text"],
+  .login-form input[type="email"],
+  .login-form input[type="password"] {
+    background-color: #2a2a2a !important;
+    color: #fff !important;
+    border: 1px solid #444 !important;
+  }
+
+  .login-form input:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.4) !important;
+  }
+
+  .login-form .btn-submit {
+    background-color: #ff2d2d !important;
+    color: #fff !important;
+  }
+
+  .btn-company,
+  .btn-submit {
+    width: 100%;
+  }
+}

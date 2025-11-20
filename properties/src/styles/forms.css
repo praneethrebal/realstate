@@ -1,0 +1,39 @@
+.formContainer {
+  height: 100%;
+  width: 100vw;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.form .form-img {
+  width: 50%;
+}
+.form .form-img img {
+  height: 300px;
+  width: 100%;
+}
+.form .content {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50%;
+  height: 300px;
+  background-color: aqua;
+}

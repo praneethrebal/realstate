@@ -1,0 +1,57 @@
+.privacy-page {
+  background-color: #f4f4f8;
+  min-height: 100vh;
+}
+
+.privacy-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  line-height: 1.7;
+  color: #333;
+}
+
+.privacy-container h1 {
+  text-align: center;
+  color: #463271;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.privacy-container .updated-date {
+  text-align: center;
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.privacy-container h2 {
+  color: #463271;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  border-left: 4px solid #463271;
+  padding-left: 0.5rem;
+}
+
+.privacy-container p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.privacy-container ul {
+  margin-left: 1.5rem;
+  list-style-type: disc;
+  color: #555;
+}
+
+.privacy-container a {
+  color: #463271;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.privacy-container a:hover {
+  text-decoration: underline;
+}

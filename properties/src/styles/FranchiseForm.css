@@ -1,0 +1,124 @@
+/* ==============================
+   FRANCHISE FORM - PROFESSIONAL STYLE
+   ============================== */
+
+.franchise-form {
+  width: 550px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  color: #111827; /* Default text color */
+}
+
+.franchise-form:hover {
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.franchise-form p {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #111827; /* Headings / paragraph color */
+  margin-bottom: 0.5rem;
+  text-align: center;
+  letter-spacing: 0.4px;
+}
+
+/* ==============================
+   INPUT FIELDS
+   ============================== */
+
+.franchise-form input,
+.franchise-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff; /* White background */
+  font-size: 1rem;
+  color: #111827; /* Input text color */
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.franchise-form input:focus,
+.franchise-form textarea:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.franchise-form ::placeholder {
+  color: #6b7280; /* Darker placeholder for readability */
+}
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+
+.franchise-form button {
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+.franchise-form button:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+/* ==============================
+   SUCCESS / ERROR FEEDBACK
+   ============================== */
+
+.franchise-form .alert {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.franchise-form .alert.success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.franchise-form .alert.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 600px) {
+  .franchise-form {
+    margin: 2rem 1rem;
+    padding: 1.7rem;
+  }
+
+  .franchise-form p {
+    font-size: 1.4rem;
+  }
+
+  .franchise-form button {
+    font-size: 0.95rem;
+  }
+}

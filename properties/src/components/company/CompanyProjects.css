@@ -1,0 +1,144 @@
+.company-projects-container {
+  padding: 20px;
+  background-color: #f9fafb;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Section Title ---------- */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #463271;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ---------- Projects Row (Horizontal Row with No Scrollbar) ---------- */
+.projects-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+/* ✅ Hide scrollbar */
+.projects-row::-webkit-scrollbar {
+  display: none;
+}
+.projects-row {
+  -ms-overflow-style: none;
+}
+
+/* ---------- Project Card ---------- */
+.project-card {
+  flex: 0 0 270px; /* ✅ Desktop width */
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Project Image ---------- */
+.project-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ---------- No Image Placeholder ---------- */
+.no-image {
+  width: 100%;
+  height: 150px;
+  background: #f0f0f0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+/* ---------- Project Details ---------- */
+.project-details {
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.project-details p {
+  font-size: 0.9rem;
+  margin: 2px 0;
+  color: #000;
+}
+
+/* ---------- See All Button (Below Cards, Left Aligned) ---------- */
+.see-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16a34a;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  width: 180px;
+  height: 48px;
+  margin: 25px 0 0 20px;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.see-all:hover {
+  background-color: #15803d;
+  transform: translateY(-2px);
+}
+
+/* ---------- Loading & Error States ---------- */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  color: #463271;
+}
+
+/* ---------- Responsive (Mobile) ---------- */
+@media (max-width: 768px) {
+  .projects-row {
+    gap: 14px;
+    padding: 10px 12px;
+  }
+
+  .project-card {
+    flex: 0 0 100%; /* ✅ Show ONLY ONE project per swipe */
+    max-width: 100%;
+  }
+
+  .see-all {
+    width: 160px;
+    height: 45px;
+    font-size: 15px;
+    margin-left: 12px;
+  }
+}

@@ -1,0 +1,116 @@
+/* =====================================
+   MY REQUIREMENTS FORM - PROFESSIONAL STYLE
+   ===================================== */
+.requirements-form {
+  max-width: 700px; /* Use max-width for better responsiveness */
+  margin: 3rem auto;
+  padding: 2.8rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  color: #111827; /* Default text color inside the form */
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr; /* Default to single column */
+  gap: 1.3rem;
+}
+
+.requirements-form:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+}
+
+.requirements-form .form-title {
+  /* New class for the title */
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #111827; /* Text color for headings/paragraphs */
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+  grid-column: 1 / -1; /* Span full width */
+}
+
+/* ===========================
+   INPUT STYLING
+   =========================== */
+.requirements-form input,
+.requirements-form textarea {
+  width: 100%;
+  padding: 1rem 1.1rem; /* Slightly more padding */
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #ffffff; /* White background for inputs */
+  font-size: 1rem;
+  color: #111827; /* Text color inside inputs */
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.requirements-form input:focus,
+.requirements-form textarea:focus {
+  border-color: #2563eb;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); /* Softer focus ring */
+}
+
+/* Placeholder style */
+.requirements-form ::placeholder {
+  color: #9ca3af; /* Lighter placeholder */
+}
+
+/* ===========================
+   BUTTON STYLING
+   =========================== */
+.requirements-form button {
+  grid-column: 1 / -1; /* Span full width */
+  background: linear-gradient(90deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600; /* Bolder text */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.5px;
+  margin-top: 0.8rem;
+}
+
+.requirements-form button:hover {
+  background: linear-gradient(90deg, #1e40af, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.2);
+}
+
+@media (min-width: 768px) {
+  .requirements-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .requirements-form .form-title,
+  .requirements-form textarea,
+  .requirements-form button {
+    grid-column: span 2;
+  }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 768px) {
+  .requirements-form {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .requirements-form p {
+    font-size: 1.6rem;
+  }
+
+  .requirements-form button {
+    font-size: 0.95rem;
+  }
+}

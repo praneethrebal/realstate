@@ -1,0 +1,205 @@
+/* ===========================
+   GLOBAL (SCOPED) STYLES
+=========================== */
+
+.addProperty {
+  height: 100%;
+  width: 99vw;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.addProperty form,
+.addProperty form .step {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff; /* white card */
+  padding: 35px 40px;
+  margin: 60px 0;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  color: #1f2937; /* dark gray text */
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   HEADINGS
+=========================== */
+.addProperty h2 {
+  text-align: center;
+  color: #1e40af; /* navy blue */
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.addProperty h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #374151;
+}
+
+/* ===========================
+   FORM SECTIONS
+=========================== */
+.addProperty .form-section {
+  margin-bottom: 28px;
+}
+
+/* ===========================
+   OPTION BUTTONS
+=========================== */
+.addProperty .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.addProperty .option {
+  flex: 1 1 calc(50% - 12px);
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background-color: #f1f5f9;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1f2937;
+  transition: all 0.3s ease;
+}
+
+.addProperty .option:hover {
+  background-color: #e0f2fe;
+  border-color: #3b82f6;
+}
+
+.addProperty .option.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+/* ===========================
+   INPUTS & SELECTS
+=========================== */
+.addProperty input[type="text"],
+.addProperty input[type="number"],
+.addProperty input[type="file"],
+.addProperty select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  background-color: #f8fafc;
+  color: #1f2937;
+}
+
+.addProperty input:focus,
+.addProperty select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ===========================
+   CHECKBOXES & LABELS
+=========================== */
+.addProperty label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-bottom: 14px;
+  color: #1f2937;
+}
+
+.addProperty input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* ===========================
+   FORM CONTAINER
+=========================== */
+.addProperty .form-container {
+  width: 100%;
+  max-width: 640px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+.addProperty .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.addProperty button {
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.addProperty button.next,
+.addProperty button[type="submit"] {
+  background-color: #3b82f6;
+  color: #ffffff;
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.addProperty button.next:hover,
+.addProperty button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(59, 130, 246, 0.35);
+}
+
+.addProperty button[type="button"] {
+  background-color: #f1f5f9;
+  color: #1f2937;
+}
+
+.addProperty button[type="button"]:hover {
+  background-color: #e2e8f0;
+}
+
+.addProperty button:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 600px) {
+  .addProperty .option {
+    flex: 1 1 100%;
+  }
+
+  .addProperty .buttons {
+    flex-direction: column;
+  }
+}

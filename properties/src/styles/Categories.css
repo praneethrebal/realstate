@@ -1,0 +1,13 @@
+.categorie-container {
+  margin-left: 30px;
+  /* ` property in the `.categorie-container` class is setting the left margin of the container to 30 pixels. This creates space between the left edge of the container and its surrounding elements. */
+  margin-left: 30px;
+  background-color: aliceblue;
+  height: 300px;
+  padding: 30px;
+}
+.categorie {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}

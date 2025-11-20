@@ -1,0 +1,64 @@
+.franchiseRegisterForm {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.formHeading {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff7b00;
+}
+
+.profile-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.profile-upload img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff7b00;
+}
+
+.upload-text {
+  color: #666;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.franchiseRegisterForm input,
+.franchiseRegisterForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.franchiseRegisterForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff7b00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.franchiseRegisterForm button:hover {
+  background-color: #e46a00;
+}
+.franchiseRegisterForm input {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}

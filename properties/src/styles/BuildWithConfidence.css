@@ -1,0 +1,140 @@
+/* ==============================
+   CONTAINER (Image + Form)
+   ============================== */
+.construction-form-container {
+  display: flex;
+  align-items: stretch; /* makes image + form same height */
+  justify-content: center;
+  max-width: 1400px; /* increased from 1200px */
+  margin: 3rem auto;
+  gap: 2.5rem; /* slightly larger gap */
+  padding: 1rem;
+  height: 700px; /* fixed height to match image and form */
+  box-sizing: border-box;
+}
+
+/* ==============================
+   LEFT SIDE IMAGE
+   ============================== */
+.construction-form-image {
+  flex: 1.2; /* slightly larger width than form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.construction-form-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ==============================
+   RIGHT SIDE FORM
+   ============================== */
+.construction-form {
+  flex: 1; /* form width slightly smaller than image */
+  background: #ffffff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  transition: all 0.3s ease;
+  color: #111827;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.construction-form:hover {
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ==============================
+   FORM TITLE
+   ============================== */
+.construction-form p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* ==============================
+   INPUTS
+   ============================== */
+.construction-form input,
+.construction-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #0f0808;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+  color: #111827;
+}
+
+.construction-form input:focus,
+.construction-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+  background-color: #fff;
+}
+
+.construction-form ::placeholder {
+  color: #666;
+}
+
+/* ==============================
+   SUBMIT BUTTON
+   ============================== */
+.construction-form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: 500;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.construction-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 91, 187, 0.25);
+}
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+@media (max-width: 900px) {
+  .construction-form-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .construction-form-image img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+
+  .construction-form {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+  }
+}
